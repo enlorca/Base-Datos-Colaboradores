@@ -1,8 +1,7 @@
-# React + Vite
+Desafio de React donde se aplica conocimiento de estado de componentes, eventos y renderización dinamica para elaborar una base de datos de colaboradores con filtro de busqueda.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+■ El proyecto es realizado en parejas con Esteban Lorca y José Corredor
 
-Currently, two official plugins are available:
+■ Según requerimientos, se importan componentes desde bootstrap React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Directorio de github https://github.com/josecorredorm/Base-Datos-Colaboradores
