@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 
 const Listado = ({ListaColaboradores}) => {
   return (
-    <div className='table'>
+    <div className='w-75 p-5'>
     <Table striped>
       <thead>
         <tr>
