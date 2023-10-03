@@ -1,10 +1,12 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const Formulario = ({
   setCollaborators,
   Collaborators,
   setAlertMessage,
   setColorMessage,
+  alertMessage,
+  colorMessage,
 }) => {
   const [NewCollaborator, setNewCollaborator] = useState({
     id: "",
@@ -37,10 +39,9 @@ const Formulario = ({
         edad: "",
         cargo: "",
         telefono: "",
-      })
+      });
       setAlertMessage("Colaborador agregado!");
       setColorMessage("false");
-      ;
     }
   };
 
@@ -69,7 +70,7 @@ const Formulario = ({
         />
         <input
           type="number"
-          placeholder="Email del colaborador"
+          placeholder="Edad del colaborador"
           name="edad"
           className="form-control mt-2"
           onChange={Addinput}
@@ -77,7 +78,7 @@ const Formulario = ({
         />
         <input
           type="text"
-          placeholder="Edad del colaborador"
+          placeholder="Cargo del colaborador"
           name="cargo"
           className="form-control mt-2"
           onChange={Addinput}
@@ -99,5 +100,4 @@ const Formulario = ({
   );
 };
 
-export default Formulario
-
+export default Formulario;

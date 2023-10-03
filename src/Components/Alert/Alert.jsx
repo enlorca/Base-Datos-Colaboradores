@@ -1,9 +1,9 @@
-import React from 'react'
-import "./Alert.css"
+import React from "react";
+import "./Alert.css";
 
 const Alert = ({ message, bgColor }) => {
-    console.log("Received message:", message);
-    console.log("Received bgColor:", bgColor);
+  console.log("Received message:", message);
+  console.log("Received bgColor:", bgColor);
   return (
     <div className="alert">
       {console.log({ bgColor })}
@@ -15,6 +15,5 @@ const Alert = ({ message, bgColor }) => {
     </div>
   );
 };
-
 
 export default Alert;

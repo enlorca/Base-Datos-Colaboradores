@@ -1,7 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import "./Buscador.css";
 
-const Buscador = () => {
+const Buscador = ({ handleInputChange }) => {
+  const handleChange = (e) => {
+    handleInputChange(e.target.value);
+  };
+
   return (
     <div>
       <input
@@ -9,8 +14,7 @@ const Buscador = () => {
         placeholder="Busca un colaborador"
         name="busqueda"
         className="form-control w-25"
-/*         onChange={Addinput}
-        value={NewCollaborator.nombre} */
+        onChange={handleChange}
       />
     </div>
   );
