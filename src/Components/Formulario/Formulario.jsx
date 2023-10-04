@@ -16,6 +16,18 @@ const Formulario = ({
     cargo: "",
     telefono: "",
   });
+  
+  const correoValido = (email) => {
+    const regex =
+      /^[^@]+@[^.]+\..+$/;
+    return regex.test(email);
+  };
+
+  const validarNombre = (nombre) => {
+    const regexName = /^[A-Za-z\s-]+$/;
+    return regexName.test(nombre);
+  };
+  
   const AddColaborador = (e) => {
     e.preventDefault();
     if (
@@ -26,6 +38,28 @@ const Formulario = ({
       NewCollaborator.telefono === ""
     ) {
       setAlertMessage("Todos los campos son obligatorios");
+      setColorMessage("true");
+      console.log("Alert message set:", alertMessage);
+      console.log("Color message set:", colorMessage);
+    } else if (
+      validarNombre(NewCollaborator.nombre) !== true
+    ) {
+      setAlertMessage("El nombre no es válido. Solo se permiten letras, espacios y guiones.");
+      setColorMessage("true");
+      console.log("Alert message set:", alertMessage);
+      console.log("Color message set:", colorMessage);
+    } else if (correoValido(NewCollaborator.correo) !== true) {
+      setAlertMessage("El correo no es valido.");
+      setColorMessage("true");
+      console.log("Alert message set:", alertMessage);
+      console.log("Color message set:", colorMessage);
+    } else if (
+      isNaN(NewCollaborator.edad) ||
+      NewCollaborator.edad < 0 ||
+      NewCollaborator.edad > 150 ||
+      NewCollaborator.edad.toString() !== inputValue.trim()
+    ) {
+      setAlertMessage("Por favor ingrese un numero entero entre 0 y 150 para la edad.");
       setColorMessage("true");
       console.log("Alert message set:", alertMessage);
       console.log("Color message set:", colorMessage);
