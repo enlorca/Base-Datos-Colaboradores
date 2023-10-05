@@ -8,12 +8,12 @@ const Buscador = ({ handleInputChange }) => {
   };
 
   return (
-    <div>
+    <div className="sectionBuscar">
       <input
         type="text"
         placeholder="Busca un colaborador"
         name="busqueda"
-        className="form-control w-25"
+        className="form-control"
         onChange={handleChange}
       />
     </div>

@@ -20,7 +20,7 @@ function App() {
     <main className="container">
       <h1 className="text-center">Lista de colaboradores</h1>
       <Buscador handleInputChange={handleInputChange} />
-      <section>
+      <section className="sectionMain">
         <Listado
           ListaColaboradores={Collaborators}
           terminoBusqueda={terminoBusqueda}
@@ -32,8 +32,8 @@ function App() {
           setColorMessage={setColorMessage}
           alertMessage={alertMessage}
         />
-        <Alert message={alertMessage} bgColor={colorMessage} />
       </section>
+      <Alert message={alertMessage} bgColor={colorMessage} />
     </main>
   );
 }

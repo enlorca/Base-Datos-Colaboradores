@@ -1,0 +1,15 @@
+.sectionAlert{
+    display: flex;
+    justify-content:flex-end;
+    padding-right: 0;
+}
+.sectionAlert p{
+    width: 260px;
+}
+
+@media (max-width: 1200px) {
+    .sectionAlert{
+        display: flex;
+        justify-content:center;
+    }
+}

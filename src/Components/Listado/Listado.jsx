@@ -12,7 +12,7 @@ const Listado = ({ ListaColaboradores, terminoBusqueda }) => {
     : ListaColaboradores;
 
   return (
-    <div className="w-75 p-5">
+    <div className="w-75 pt-5">
       <Table striped>
         <thead>
           <tr>

@@ -1,3 +1,4 @@
+import "./Formulario.css";
 import { useState } from "react";
 
 const Formulario = ({
@@ -56,9 +57,8 @@ const Formulario = ({
     } else if (
       isNaN(NewCollaborator.edad) ||
       NewCollaborator.edad < 0 ||
-      NewCollaborator.edad > 150 ||
-      NewCollaborator.edad.toString() !== inputValue.trim()
-    ) {
+      NewCollaborator.edad > 150)
+     {
       setAlertMessage("Por favor ingrese un numero entero entre 0 y 150 para la edad.");
       setColorMessage("true");
       console.log("Alert message set:", alertMessage);
@@ -83,7 +83,7 @@ const Formulario = ({
     setNewCollaborator({ ...NewCollaborator, [j.target.name]: j.target.value });
   };
   return (
-    <div>
+    <div className="sectionForm">
       <h3>Agregar colaborador</h3>
       <form className="form p-2" onSubmit={AddColaborador}>
         <input
